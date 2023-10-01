@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="fontello-59bdcb39/css/fontello.css">
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <main class="container mx-auto">
+      <div class="darkmode">
+        <h1 class="uppercase mx-auto  text-center text-4xl font-bold py-10">javascript dark theme</h1>
+        <div class=" text-center py-24 mx-auto">
+          <i class="icon-sun-filled text-6xl cursor-pointer"> </i>
+        </div>
+      </div>
+    </main>
+    <script>
+        let i=1
+        let body = document.getElementsByTagName('body')[0]
+        let h1 = document.getElementsByTagName('h1')[0]
+        document.getElementsByTagName('i')[0].addEventListener('click',(e)=>{
+            if(i%2){
+                body.style.backgroundColor='black'
+                body.style.transition='all 1s'
+                e.target.classList.add('icon-moon-3')
+                e.target.style.transition='all 1s'
+                h1.style.color='white'
+                e.target.classList.remove('icon-sun-filled')
+                e.target.style.color='white'
+            }else{
+                e.target.classList.remove('icon-moon-3')
+                body.style.backgroundColor='white'
+                e.target.classList.add('icon-sun-filled')
+                e.target.style.color='black'
+                h1.style.color='black'
+                h1.style.transition='all 1s'
+            }
+            i++
+        })
+    </script>
+  </body>
+</html>
